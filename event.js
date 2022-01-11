@@ -1,21 +1,3 @@
-/*イベント
-    イベントを用いると、ある処理を行うタイミングを設定できます。WEBページ内で、ユーザーによってクリックなどの操作が行われた時、あらかじめイベント内に指定した処理を実行します。
-    イベントの構文は、$('セレクタ').イベント名(function(){ });のように書く。
-    
-    clickイベントを用いると、「セレクタがクリックされた時に処理をする」ことができます。
-    例えば、ボタンをクリックしたときに関連する文章を表示する等
-    
-  cssメソッド
-    CSSメソッドは、CSSを変更できるメソッドです。1つ目の引数にCSSのプロパティを、2つ目の引数にプロパティの値をいれます。
-    cssメソッドで要素の文字の色を変更したいときは、$('セレクタ').css('color', 'red');のように記述します。
-    
-    cssメソッドでdisplayプロパティの値を変更することもできます。$('セレクタ').css('display', 'none');はhideメソッドと全く同じです。このようにhideメソッドやshowメソッドは、実はdisplayプロパティの値を変更しているだけだということを覚えておきましょう。
-    
-  textメソッドとhtmlメソッド
-    textメソッドを用いることでHTMLそのものを変更することも出来ます。textメソッドは、$('セレクタ').text('書き換える文字列');のように記述します。
-    
-    htmlメソッドは、要素の中身のHTMLを書き換えることが出来ます。textメソッドと違い、htmlメソッドの引数は、単なる文字列ではなくHTMLだということです。要素を<span>タグなどで囲う操作をtextメソッドで行うと、<span>タグもそのまま文字列としてブラウザに表示されますが、htmlメソッドなら<span>タグがHTMLタグと認識され、ブラウザには「こんばんは」とだけ表示されます。*/
-
 $(function() {
   $('#hide-text').click(function(){
     $('#text').slideUp();
@@ -27,14 +9,24 @@ $(function() {
   });
 
   $('#change-text').click(function(){
-    $('#welcome').text('welcome jquerry');
+    $('#welcome').text('welcome jquery');
   });
 
   $('#change-html').click(function(){
-    $('#welcome').html('<a href="#">go to jquerry</a>');
+    $('#welcome').html('<a href="#">go to jquery</a>');
   });
 
   $('.list-item').click(function(){
     $(this).css('color','blue');
+  });
+
+  $('.btn').click(function() {
+    var $title = $('#title');
+    
+    $title.css('color', 'red');
+    $title.html('こんばんは、〇〇さん');
+    $title.fadeOut(1000);
+    
+    $('#text4').css('color','blue').html('<h3>jQueryをマスターしましょう！</h3>').fadeOut(1000);
   });
 });
