@@ -33,4 +33,8 @@ $(function() {
   $('#change-html').click(function(){
     $('#welcome').html('<a href="#">go to jquerry</a>');
   });
+
+  $('.list-item').click(function(){
+    $(this).css('color','blue');
+  });
 });
