@@ -50,3 +50,11 @@
   margin: 10px auto;
   cursor: pointer;
 }
+
+.text-contents{
+  display:none;
+}
+
+.text-active{
+  display: block;
+}
