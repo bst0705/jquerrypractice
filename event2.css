@@ -58,3 +58,11 @@
 .text-active{
   display: block;
 }
+
+.answer{
+  display: none;
+}
+
+.open{
+  display: block;
+}

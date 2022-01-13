@@ -39,4 +39,14 @@ $(function(){
     function () {
       $(this).find('.text-contents').removeClass('text-active');
     });
+
+  $('.faq-list-item').click(function () {
+    let $answer = $(this).find('.answer');
+    if ($answer.hasClass('open')){
+      $answer.removeClass('open');
+    }
+    else{
+      $answer.addClass('open');
+    }
+    })
 });
