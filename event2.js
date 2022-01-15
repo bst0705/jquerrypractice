@@ -65,5 +65,5 @@ $(function(){
       $answer.slideDown();
       $(this).find('span').text('-');
     }
-    })
+    });
 });
