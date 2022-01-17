@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jquery</title>
+  <link rel="stylesheet" type="text/css" href="event4.css">
+  <!-- jQueryの読み込み -->
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="section-title">
+      <h3>ホロメン総選挙</h3>  
+    </div>
+    <div class="section-content">
+      <form id="form" class="form">
+        <div class="form-group">
+          <div>好きなホロメン：</div>
+          <select id="select-form" class="select-form">
+            <option value="未選択">選択してください</option>
+            <option value="白上フブキ">1. 白上フブキ</option>
+            <option value="兎田ぺこら">2. 兎田ぺこら</option>
+            <option value="湊あくあ">3. 湊あくあ</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <div>理由：</div>
+          <textarea id="text-form" class="text-form"></textarea>  
+        </div>
+        <button type="submit" class="btn btn-submit">送信</button>
+      </form>
+      <div class="output-wrapper">
+        <h4>結果</h4>
+        <div class="output-inner">
+          <p class="output-item">好きなホロメン：<span id="output-select"></span></p>
+          <p class="output-item">理由：<span id="output-text"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="event5.js"></script>
+</body>
+</html>
