@@ -41,7 +41,11 @@ submitイベント
   それぞれのdata-option属性にはselectタグの選択肢（option）の
   value属性に対応する値を指定しておきます。
   こうすることで、緑色の選択ボタンを押して自動的にセレクトボックスが選択されるようになる。
-  */
+  
+animateメソッド
+  アニメーションをつけるにはanimateメソッドを用います。$('セレクタ').animate({'プロパティ':'値'})のように、引数は連想配列で指定します。
+  2つ目の引数でアニメーションの時間を設定することができます。
+  時間はミリ秒で指定するか、'slow'や'fast'といった文字列で指定することができます。*/
 
 $(function() {
  $('#form').submit(function(){
@@ -69,4 +73,16 @@ $(function() {
   $('#text-form').val(optionText + "が好きな理由は");
   $('#select-form').val(clickedOption);
  });
+
+ $('.social-icon').hover(
+  function(){
+    $(this).animate({
+      'font-size':'30px'
+      },'fast');
+    },
+  function(){
+    $(this).animate({
+      'font-size':'24px'
+      },'slow');
+    });
 });
