@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jquery</title>
+  <link rel="stylesheet" type="text/css" href="event4.css">
+  <!-- jQueryの読み込み -->
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="section-title">
+      <h3 id="title">ホロライブについて</h3>
+    </div>
+    <div class="section-content">
+      <p id="content">
+        YouTubeを中心に
+        合計約3,500万人のファンを有する、
+        VTuber事務所「ホロライブプロダクション」を
+        運営しています。
+      </p>
+      <a href="##" id="link">→ ホロライブについてもっと詳しく</a>
+    </div>
+    <div class="output-wrapper">
+      <h4>内容</h4>
+      <div class="output-inner">
+        <p class="output-item">タイトル：<span id="title-text"></span></p>
+        <p class="output-item">文章のid：<span id="content-id"></span></p>
+        <p class="output-item">リンクのURL：<span id="link-href"></span></p>
+      </div>
+    </div>
+  </div>
+  <script src="event4.js"></script>
+</body>
+</html>
