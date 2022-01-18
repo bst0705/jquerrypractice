@@ -45,7 +45,24 @@ submitイベント
 animateメソッド
   アニメーションをつけるにはanimateメソッドを用います。$('セレクタ').animate({'プロパティ':'値'})のように、引数は連想配列で指定します。
   2つ目の引数でアニメーションの時間を設定することができます。
-  時間はミリ秒で指定するか、'slow'や'fast'といった文字列で指定することができます。*/
+  時間はミリ秒で指定するか、'slow'や'fast'といった文字列で指定することができます。
+  
+ページ内リンク
+  <a>タグは他のページへのリンクだけでなく、ページ内のリンクを作ることもできる。
+  リンクの飛び先にidを指定し、<a>タグのhref属性に"#id名"とすると、<a>タグをクリックするとそのidの要素が表示されている場所まで移動するようになります。
+  
+scrollTopメソッド
+  ページ内リンクはjQueryでも実装できる。jQueryで実装するとリンク先への移動にアニメーションをつけたりすることが可能になります。
+  scrollTopメソッドは、$('html, body').scrollTop(値); のように指定し、
+  ページ最上部から値pxの位置に移動することができます。
+  scrollTopは通常$('html, body')に対して用いるので、セットで覚えておく。
+  
+スクロールにアニメーションをつける
+  animateメソッドでは、CSSの値だけでなく、scrollTopなどの値も変更できる。
+  $('html, body').animate({'scrollTop': 0}, 時間); のように指定する。
+  
+ナビゲーションをつくる(ページ内リンク)
+  押したボタンに応じて任意の場所まで自動でスクロールするようにする*/
 
 $(function() {
  $('#form').submit(function(){
@@ -84,5 +101,19 @@ $(function() {
     $(this).animate({
       'font-size':'24px'
       },'slow');
-    });
+  });
+
+ $('#top-btn').click(function(){
+   $('html,body').animate({
+    'scrollTop':0
+   },500)
+ });
+
+ $('header').find('a').click(function(){
+  var id = $(this).attr('href');
+  var position = $(id).offset().top;
+  $('html, body').animate({
+    'scrollTop': position
+  },500)
+});
 });
